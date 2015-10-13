@@ -30,7 +30,7 @@ public class RepONGH2 implements IRepONG{
 
 	@Override
 	public void atualizar(ONG ong, Long id) {
-		ong.update(id);
+		ong.update(""+id);
 	}
 
 }

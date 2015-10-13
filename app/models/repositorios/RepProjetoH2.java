@@ -30,7 +30,7 @@ public class RepProjetoH2 implements IRepProjeto{
 
 	@Override
 	public void atualizar(Projeto projeto, Long id) {
-		projeto.update(id);
+		projeto.update(""+id);
 	}
 
 }

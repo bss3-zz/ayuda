@@ -1,5 +1,7 @@
 package models.cadastros;
 
+import java.io.FileNotFoundException;
+
 import models.Projeto;
 import models.fabricaRepositorio.FabricaRepositorio;
 import models.repositorios.IRepProjeto;
@@ -8,7 +10,7 @@ public class CadastroProjeto {
 	private IRepProjeto repProjeto;
 	
 	
-	public CadastroProjeto() {
+	public CadastroProjeto() throws FileNotFoundException {
 		repProjeto = FabricaRepositorio.criarFabricaRep().criarRepProjeto();
 	}
 

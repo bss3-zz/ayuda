@@ -30,7 +30,7 @@ public class RepVoluntarioH2 implements IRepVoluntario{
 
 	@Override
 	public void atualizar(Voluntario voluntario, Long id) {
-		voluntario.update(id);
+		voluntario.update(""+id);
 	}
 
 }

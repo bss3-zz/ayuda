@@ -30,7 +30,7 @@ public class RepUsuarioH2 implements IRepUsuario{
 
 	@Override
 	public void atualizar(Usuario usuario, Long id) {
-		usuario.update(id);
+		usuario.update(""+id);
 	}
 
 }
