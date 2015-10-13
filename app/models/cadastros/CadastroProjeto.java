@@ -1,28 +1,27 @@
 package models.cadastros;
 
 import models.Projeto;
-import models.FabricaRep.FabricaRep;
-import models.Repositorios.IRepTreinamento;
+import models.fabricaRepositorio.FabricaRepositorio;
+import models.repositorios.IRepProjeto;
 
-public class CadastroTreinamento {
-	private IRepTreinamento repTreinamento;
+public class CadastroProjeto {
+	private IRepProjeto repProjeto;
 	
 	
-	public CadastroTreinamento() {
-		repTreinamento = FabricaRep.criarFabricaRep().createRepTreinamento();
+	public CadastroProjeto() {
+		repProjeto = FabricaRepositorio.criarFabricaRep().criarRepProjeto();
 	}
 
 
-	public void cadastrar(Treinamento treinamento) {
-		treinamento.aprovado = false;
-		repTreinamento.cadastrar(treinamento);
+	public void cadastrar(Projeto Projeto) {
+		repProjeto.cadastrar(Projeto);
 	}
 	
 	public void remover(Long id){
-		repTreinamento.remover(id);
+		repProjeto.remover(id);
 	}
 	
-	public void atualizar(Treinamento treinamento) {
-		repTreinamento.atualizar(treinamento, treinamento.id);
+	public void atualizar(Projeto Projeto) {
+		repProjeto.atualizar(Projeto, Projeto.id);
 	}
 }

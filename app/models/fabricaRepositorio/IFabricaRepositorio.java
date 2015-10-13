@@ -6,7 +6,7 @@ import models.repositorios.IRepUsuario;
 import models.repositorios.IRepProjeto;
 
 
-public interface IFabricaRep {
+public interface IFabricaRepositorio {
 	public IRepONG criarRepONG();
 	public IRepVoluntario createRepVoluntario();
 	public IRepUsuario criarRepUsuario();

@@ -20,7 +20,7 @@ public class Usuario extends Model{
 	public String senha;
 	
 	public String getDigest(String senha){
-	    if (senha == null || senha.lenght){
+	    if (senha == null || senha.length()==0){
 	        throw new IllegalArgumentException("O campo de senha naão pode ser vazio");
 	    }
 	    MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
@@ -34,8 +34,8 @@ public class Usuario extends Model{
 	}
 	
 	public boolean authenticate(String usuario, String senha){
-	    senhaPassada = getDigest(senha)
-	    return this.usuario.equals(usuario) && this.verificarSenha(senha);
+	    String senhaPassada = getDigest(senha);
+	    return this.usuario.equals(usuario) && this.verificarSenha(senhaPassada);
 	}
 	
 	public boolean verificarSenha(String senha){

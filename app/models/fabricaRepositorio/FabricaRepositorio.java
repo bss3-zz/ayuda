@@ -1,41 +1,40 @@
 package models.fabricaRepositorio;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class FabricaRep {
+public class FabricaRepositorio {
 	public static enum tipoBD{H2, ORACLE, POSTGRES}
 	
-	private FabricaRep.tipoBD getDBtype(){
-		Scanner input = new Scanner(new File("conf.txt");
+	private static FabricaRepositorio.tipoBD getDBtype() throws FileNotFoundException{
+		Scanner input = new Scanner(new File("conf.txt"));
 		String temp = input.nextLine();
-		String[] temp2 = temp.split(':');
-		if(temp2[0].equal("DATABASE"){
+		String[] temp2 = temp.split(temp, ':');
+		if(temp2[0].equals("DATABASE")){
 			switch(temp2[0]){
 				case "H2":
-					return this.tipoBD.H2;
-					break;
+					return FabricaRepositorio.tipoBD.H2;
 				case "ORACLE":
-					return this.tipoBD.ORACLE;
-					break;
+					return FabricaRepositorio.tipoBD.ORACLE;
 				case "POSTGRES":
-					return this.tipoBD.POSTGRES;
-					break;
+					return FabricaRepositorio.tipoBD.POSTGRES;
 			}	
 		}else{
 			throw new IllegalArgumentException("Configuração de database inválida");
 		}
+		return null;
 		
 	}
 	
-	public static IFabricaRep criarFabricaRep(){
-		IFabricaRep fabrica = null;
+	public static IFabricaRepositorio criarFabricaRep() throws FileNotFoundException{
+		IFabricaRepositorio fabrica = null;
 		
-		FabricaRep.tipoBD opcao = getDBtype();
+		FabricaRepositorio.tipoBD opcao = getDBtype();
 		
 		switch(opcao){
 			case H2:
-				fabrica = new FabricaRepH2();
+				fabrica = new FabricaRepositorioH2();
 				break;
 				
 			case ORACLE:

@@ -4,7 +4,7 @@ import java.util.List;
 
 import models.ONG;
 
-public interface IRepOng {
+public interface IRepONG {
 	public List<ONG> all();
 	
 	public ONG findId(long id);
