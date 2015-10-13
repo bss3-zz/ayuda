@@ -15,15 +15,15 @@ public class CadastroProjeto {
 	}
 
 
-	public void cadastrar(Projeto Projeto) {
-		repProjeto.cadastrar(Projeto);
+	public void cadastrar(Projeto projeto) {
+		repProjeto.cadastrar(projeto);
 	}
 	
 	public void remover(Long id){
 		repProjeto.remover(id);
 	}
 	
-	public void atualizar(Projeto Projeto) {
-		repProjeto.atualizar(Projeto, Projeto.id);
+	public void atualizar(Projeto projeto) {
+		repProjeto.atualizar(projeto, projeto.id);
 	}
 }

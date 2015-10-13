@@ -12,7 +12,7 @@ import models.repositorios.RepVoluntarioH2;
 public class FabricaRepositorioH2 implements IFabricaRepositorio{
 	
 	@Override
-	public IRepVoluntario createRepVoluntario() {
+	public IRepVoluntario criarRepVoluntario() {
 		return new RepVoluntarioH2();
 	}
 

@@ -8,7 +8,7 @@ import models.repositorios.IRepProjeto;
 
 public interface IFabricaRepositorio {
 	public IRepONG criarRepONG();
-	public IRepVoluntario createRepVoluntario();
+	public IRepVoluntario criarRepVoluntario();
 	public IRepUsuario criarRepUsuario();
 	public IRepProjeto criarRepProjeto();
 }
