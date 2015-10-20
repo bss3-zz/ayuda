@@ -1,21 +1,20 @@
 package models.repositorios;
 
+import java.util.Iterator;
 import java.util.List;
 
-import models.Usuario;
+import models.entity.Usuario;
 
 
 public class RepUsuarioH2 implements IRepUsuario{
 	@Override
 	public List<Usuario> all() {
-		// TODO Auto-generated method stub
-		return null;
+		return Usuario.find.all();
 	}
 
 	@Override
 	public Usuario findId(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return Usuario.find.byId(id);
 	}
 
 	@Override
@@ -33,5 +32,20 @@ public class RepUsuarioH2 implements IRepUsuario{
 		usuario.update(""+id);
 	}
 
+	public boolean verificarUsuario(Usuario usuario){
+		boolean retorno = false;
+		List<Usuario> usuarios = all();
+		Iterator<Usuario> it = usuarios.iterator();
+		
+		while(it.hasNext()){
+			Usuario usu = it.next();
+			if (usu.verificarUsername(usuario.usuario)){
+				retorno = true;
+				break;
+			}
+		}
+		
+		return retorno;
+	}
 }
 

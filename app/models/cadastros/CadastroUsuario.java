@@ -1,8 +1,9 @@
 package models.cadastros;
 
 import java.io.FileNotFoundException;
+import java.util.List;
 
-import models.Usuario;
+import models.entity.Usuario;
 import models.fabricaRepositorio.FabricaRepositorio;
 import models.repositorios.IRepUsuario;
 
@@ -25,5 +26,17 @@ public class CadastroUsuario {
 	
 	public void atualizar(Usuario usuario) {
 		repUsuario.atualizar(usuario, usuario.id);
+	}
+	
+	public boolean verificarUsername(Usuario usuario){
+		return repUsuario.verificarUsuario(usuario);
+	}
+	
+	public List<Usuario> listarUsuarios(){
+		return repUsuario.all();
+	}
+	
+	public Usuario pegarUsuario(Long id){
+		return repUsuario.findId(id);
 	}
 }

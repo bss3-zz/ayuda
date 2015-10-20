@@ -3,7 +3,24 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
+GET     /                           controllers.Application.home()
+
+GET     /home.html                  controllers.Application.home()
+GET     /criar_projeto.html         controllers.Application.criar_projeto()
+GET     /index.html                 controllers.Application.index()
+GET     /info_ong.html              controllers.Application.info_ong()
+GET     /info_usuario.html          controllers.VoluntarioController.loadPage()
+GET     /login.html                 controllers.Application.login()
+GET     /cadastro.html              controllers.Application.cadastro()
+GET     /pagamento.html             controllers.Application.pagamento()
+GET     /perfil_ong.html            controllers.Application.perfil_ong()
+GET     /menu_logado.html           controllers.Application.menu_logado()
+GET     /perfil_usuario.html        controllers.Application.perfil_usuario()
+GET     /projeto.html               controllers.Application.projeto()
+GET     /info_projeto.html          controllers.Application.info_projeto()
+
+
+POST 	/cadastrarVoluntario/		controllers.VoluntarioController.registrar()
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET     /*file               controllers.Assets.versioned(path="/public", file: Asset)

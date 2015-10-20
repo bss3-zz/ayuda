@@ -1,4 +1,4 @@
-package models;
+package models.entity;
 
 import javax.persistence.*;
 import java.security.MessageDigest;
@@ -21,6 +21,30 @@ public class Usuario extends Model{
 	@Required
 	public String senha;
 	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
 	public String getDigest(String senha) throws NoSuchAlgorithmException{
 	    if (senha == null || senha.length()==0){
 	        throw new IllegalArgumentException("O campo de senha naão pode ser vazio");
@@ -44,7 +68,11 @@ public class Usuario extends Model{
 	    return this.senha.equals(getDigest(senha));
 	}
 	
-	public static Finder<Long,Voluntario> find = new Finder<Long,Voluntario>(Long.class, Voluntario.class); 
+	public boolean verificarUsername(String username){
+		return this.usuario.equalsIgnoreCase(username);
+	}
+	
+	public static Finder<Long,Usuario> find = new Finder<Long,Usuario>(Long.class, Usuario.class); 
 }
 
 

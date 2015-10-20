@@ -2,7 +2,7 @@ package models.repositorios;
 
 import java.util.List;
 
-import models.Usuario;
+import models.entity.Usuario;
 
 public interface IRepUsuario {
 	public List<Usuario> all();
@@ -14,4 +14,6 @@ public interface IRepUsuario {
 	public void remover(long id);
 	
 	public void atualizar(Usuario usuario, Long id);
+	
+	public boolean verificarUsuario(Usuario usuario);
 }

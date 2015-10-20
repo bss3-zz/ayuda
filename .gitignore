@@ -49,4 +49,4 @@ local.properties
 .texlipse
 
 # Logs
-.log
+*.log

@@ -1,0 +1,726 @@
+	button {
+   		background-color: transparent;
+    	border: none;
+	}
+
+	input{
+
+		font-family: 'calibri';
+		font-size: 12px;
+		outline-color: rgb(0,137,95);
+	}
+
+	textarea{
+
+		max-width: 800px;
+		max-height: 500px;
+		font-family: 'calibri';
+		font-size: 12px;
+		outline-color: rgb(0,137,95);
+	}
+
+	a{
+
+		color: rgb(0,137,95);
+		font-family: 'calibri';
+		text-decoration: none;
+	}
+	iframe{
+
+		border: none;
+	}
+
+	*{
+
+		margin: 0;
+
+	}
+
+	.tudo{
+
+		background-image: url('imagens/bg1.png');
+		margin: 0 auto;
+	}
+
+/*************************************/
+/************ COMEÇO MENU ************/
+/*************************************/
+
+	#menu{
+
+		margin: 0 auto;
+		padding-top: 18px;
+		width: 870px;
+	}
+
+	#flag_esquerda{
+
+		height: 113px;
+		width: 312px;
+		background-image: url('imagens/flage2.png');
+	}
+	
+	#flag_direita{
+
+		height: 113px;
+		width: 312px;
+		background-image: url('imagens/flagd2.png');
+	}
+
+	#logo{
+
+		width: 195px;
+		height: 113px;
+		margin-left: 20px;
+		margin-right: 20px;
+		background-image: url('imagens/logo.png');
+	}	
+
+	#os_projetos{
+
+		width: 81px;
+		height: 18px;
+		margin-top: 28px;
+		margin-left: 105px;
+		background-image: url('imagens/os_projetos.png');
+	}
+
+	#quem_somos{
+
+		width: 94px;
+		height: 18px;
+		margin-top: 31px;
+		margin-left: 20px;
+		background-image: url('imagens/quemsomos.png');
+	}
+
+	#cadastro{
+
+		width: 62px;
+		height: 18px;
+		margin-top: 27px;
+		margin-left: 15px;
+		background-image: url('imagens/cadastro.png');
+	}
+
+	#entrar_ayuda{
+
+		width: 114px;
+		height: 18px;
+		margin-top: 27px;
+		margin-left: 30px;
+		background-image: url('imagens/entrar_ayuda.png');
+	}
+
+	.menus{
+
+		display: inline-block;
+	}
+
+	.item_menus{
+
+		display: inline-block;
+		float: left;
+	}
+
+	.info_usuario{
+
+		margin-top: 20px;
+		height: 50px;
+		display: inline-block;
+		float: left;
+	}
+
+	.info_usuario2{
+
+		height: 50px;
+		display: inline-block;
+		float: left;
+	}
+
+	#visitante{
+
+		margin-left: 50px;
+		margin-top: 20px;
+		float: left;
+	}
+
+	#foto_usuario{
+
+		margin-left: 0px;
+		padding-left: -20px;
+		width: 50px;
+
+	}
+
+	#menu_usuario{
+
+		padding-top: 5px;
+		margin-left: -10px;
+	}
+
+
+	#info{
+
+		color: rgb(0,137,95);
+		font-family: 'calibri';
+		font-size: 15px;
+	}
+
+	#saida{
+
+		color: rgb(120,120,120);
+		margin-left: 3px;
+	}
+
+/*************************************/
+/************* FIM MENU **************/
+/*************************************/
+
+	.caixam{
+
+		width: 870px;
+		background-color: rgb(255,0,0);
+		margin: 0 auto;
+		padding-top: 20px;
+		margin-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.titulo_bandeira{
+
+		padding-top: 6px;
+		padding-left: 7px;
+		color: rgb(255,255,255);
+		font-family: "calibri";
+		font-size: 20px;
+	}
+	
+	.ban_vermelha{
+	
+		height: 34px;
+		width: 185px;
+		background-image: url('imagens/red.png');
+	}
+
+	.ban_verde{
+
+		height: 34px;
+		width: 185px;
+		background-image: url('imagens/green.png');
+	}
+
+	.ban_grande{
+
+		height: 34px;
+		width: 370px;
+		background-image: url('imagens/flag_big.png');
+	}
+
+	#organizador{
+
+		margin-left: 20px;
+	}
+
+	.letras_pretas{
+
+
+		font-family: "calibri";
+		font-size: 15px;
+	}
+
+	#caixa_video{
+
+		height: 435px;
+	}
+
+	.video_youtube_home{
+
+		margin-top: 20px;
+		display: inline-block;
+	}
+
+	.video_youtube_projeto{
+
+		margin-top: 20px;
+		margin-right: 20px;
+		margin-bottom: 40px;
+		display: inline-block;
+	}
+
+	#resumo_projeto_home{
+
+		width: 210px;
+	}
+
+	#resumo_projeto{
+
+		margin-right: 35px;
+		width: 210px;
+	}
+
+	#entrar{
+
+		width: 58px;
+		height: 21px;
+		margin-top: 15px;
+		background-image: url('imagens/but_entrar.png');
+	}
+
+	#enviar{
+
+		width: 116px;
+		height: 42px;
+		margin-top: 15px;
+		margin-left: 30px;
+		background-image: url('imagens/but_enviar.png');
+	}
+
+	#but_cadastro{
+
+		width: 127px;
+		height: 21px;
+		margin-top: 15px;
+		background-image: url('imagens/but_cadastro.png');
+	}
+
+	#login{
+
+		padding-left: 10px;
+	}
+
+	#cadastro_redesocial{
+
+		width: 200px;	
+	}
+
+	#caixa_cadastro{
+
+		height: 350px;
+	}
+
+	#caixa_perfil{
+
+		height: 220px;
+	}
+
+	#caixa_novo_projeto{
+
+		margin-bottom: 30px;
+	}
+
+	#caixa_pagamento{
+
+		height: 350px;
+	}
+
+	#foto_perfil{
+
+		border-color: rgb(0,137,95);
+		margin-left: 30px;
+	}
+
+	.caixas{
+
+		display: inline-block;
+		margin-bottom: 20px;
+		float: left;
+	}
+
+	.caixas_perfil{
+
+		display: inline-block;
+		margin-bottom: 20px;
+		float: left;
+		margin-top: 15px;
+		margin-left: 30px;	
+	}
+
+	.opcoes_perfil{
+
+		margin-top: 5px;
+		float: left;
+	}
+
+	.margintop{
+
+		margin-top: 3px;
+	}
+
+	.caixinhas{
+
+		width: 186px;
+		margin-top: 15px;
+		margin-left: 15px;
+		margin-right: 15px;	
+	}
+
+	.titulo_caixinhas{
+
+		color: rgb(0,0,0);
+		font-family: "calibri";
+		font-size: 18px;
+	}
+
+	.titulo_caixinhas2{
+
+		padding-top: 14px;
+		width: 150px;
+		height: 50px;
+		text-align: center;
+		color: rgb(0,0,0);
+		font-family: "calibri";
+		font-size: 18px;
+	}
+
+	.titulo_caixinhas2:hover{
+
+		color: rgb(255,255,255);
+		font-family: "calibri";
+		font-size: 18px;
+	}
+
+	.subtitulos{
+
+		color: rgb(102,102,102);
+		font-family: "calibri";
+		font-size: 12px;
+		margin-bottom: 15px;
+	}
+
+	.opcoes{
+
+		color: rgb(0,0,0);
+		font-family: "calibri";
+		font-size: 14px;
+		margin-bottom: 1px;
+		margin-top: 3px;
+		margin-left: 2px;
+	}
+
+	.barras{
+
+		width: 9px;
+		height: 225px;
+		margin-top: 40px;
+		background-image: url('imagens/barra.png');
+	}
+
+	.projeto{
+
+		background-color: rgb(255,255,255);
+		width: 200px;
+		height: 450px;
+		margin-top: 20px;
+		margin-right: 2px;
+		margin-left: 10px;
+		display: inline-table;
+	}
+
+	.titulo_projeto{
+
+		margin-top: 5px;
+		margin-left: 4px;
+		width: 190px;
+		height: 35px;
+		color: rgb(0,0,0);
+		font-family: "calibri";
+		font-size: 14px;
+
+	}
+
+	.titulo_projeto2{
+
+		margin-top: 5px;
+		margin-left: 4px;
+		width: 600px;
+		color: rgb(0,0,0);
+		font-family: "calibri";
+		font-size: 14px;
+
+	}
+
+	.ong_resp{
+
+		margin-top: 3px;
+		margin-left: 4px;
+		width: 190px;
+		height: 31px;
+		color: rgb(119,119,119);
+		font-family: "calibri";
+		font-size: 12px;
+	}
+
+	.resumo_projeto{
+
+		margin-top: 5px;
+		margin-left: 4px;
+		width: 190px;
+		height: 150px;
+		color: rgb(0,0,0);
+		font-family: "calibri";
+		font-size: 11px;
+		text-align: justify;		
+	}
+
+	.resumo_projeto2{
+
+		margin-top: 5px;
+		margin-left: 4px;
+		width: 600px;
+		height: 80px;
+		color: rgb(0,0,0);
+		font-family: "calibri";
+		font-size: 12px;
+		text-align: justify;		
+	}
+
+	.textosprojetos{
+
+		height: 225px;
+	}
+
+	.textosprojetos2{
+
+		padding-left: 5px;
+	}
+
+	#fundo_branco{
+
+		width: 620px;
+		height: 150px;
+		background-color: rgb(255,255,255);
+	}
+
+	.fundo_branco2{
+
+		background-color: rgb(255,255,255);
+	}
+
+	.fundo_branco2:hover{
+
+		background-color: rgb(0,137,95);
+	}
+
+	.botoes_pagamento{
+
+		height: 50px;
+		width: 152px;
+		float: left;
+	}
+
+	.but_veja{
+
+		margin-left: 286px;
+		margin-top: 20px;
+		height: 34px;
+		width: 300px;
+		background-image: url('imagens/flagbut.png');
+
+	}
+
+	#ultimos_dias{
+
+		padding-top: 8px;
+		padding-left: 60px;
+		font-family: "calibri";
+		font-size: 15px;
+		color: rgb(255,255,255);
+
+	}
+
+	#novos_projetos{
+
+		padding-top: 8px;
+		padding-left: 60px;
+		font-family: "calibri";
+		font-size: 15px;
+		color: rgb(255,255,255);
+	}
+
+	#rodape{
+
+		height: 150px;
+	}
+
+	#logo_rodape{
+
+		margin: 0 auto;
+		margin-top: 30px;
+		width: 195px;
+		height: 113px;
+		background-image: url('imagens/logo.png');		
+	}
+
+	.info_projeto{
+
+		width: 95px;
+		display: inline-block;
+	}
+
+	.valor{
+
+		color: rgb(0,137,95);
+		font-family: 'calibri';
+		font-size: 15px;
+		margin-left: 3px;
+	}
+	
+	.dias_urgente{
+
+		text-align: right;
+		color: rgb(255,0,0);
+		font-family: 'calibri';
+		font-size: 15px;
+		margin-left: 3px;
+	}
+
+	.dias_normal{
+
+		text-align: right;
+		color: rgb(0,137,95);
+		font-family: 'calibri';
+		font-size: 15px;
+		margin-left: 3px;
+	}
+
+	.levantados{
+
+		color: rgb(120,120,120);
+		font-family: 'calibri';
+		font-size: 12px;
+		margin-left: 3px;
+	}
+
+	.restantes{
+
+		text-align: right;
+		color: rgb(120,120,120);
+		font-family: 'calibri';
+		font-size: 12px;
+		margin-left: 3px;
+	}
+
+	.img_num{
+
+		margin-top: 25px;
+		margin-left: 20px;
+		width: 185px;
+	}
+
+	.imagem_boneco{
+
+		float: left;
+		display: inline-block;	
+	}
+
+	.numero_maior{
+
+		font-family: 'calibri';
+		font-size: 30px;
+		color: rgb(0,137,95);
+	}
+
+	.numero_maior_menores{
+
+		margin-left: 20px;	
+		font-size: 50px;
+		font-family: 'calibri';
+		color: rgb(0,137,95);
+	}
+
+	#caixa_letrinhas{
+
+		width: 200px;
+		margin-top: 10px;
+		margin-left: 20px;
+	}
+
+	#letrinhas{
+
+
+		font-family: 'calibri';
+		font-size: 10px;
+		color: rgb(100,100,100);
+		text-align: justify;
+	}
+
+	#tamanho_video_projeto{
+
+		width: 600px;
+	}
+
+	.botoes_apoio{
+
+		display: inline-block;
+		width: 290px;
+		height: 64px;
+		margin-top: 20px;
+	}
+
+	.apoio_financ{
+
+		margin-right: 16px;
+	}
+
+	#borda_foto{
+
+		border-style: solid;
+		border-color:  rgb(0,137,95); 
+	}
+
+	.info_new_projeto{
+
+		margin-top: 15px;
+		margin-left: 15px;
+	}
+
+	.dados_projetos{
+
+		margin-left: 15px;
+	}
+
+	.margem_top{
+
+		margin-top: 15px;
+	}
+
+	.margin_left{
+
+		margin-left: 20px;
+	}
+
+	.tamanho_input1{
+
+		width: 350px;
+		height: 30px;
+		margin-left: 20px;
+	}
+
+	.tamanho_input2{
+
+		width: 500px;
+		height: 100px;
+		max-height: 100px;
+	}
+
+	.tamanho_input3{
+
+		width: 800px;
+		height: 300px;
+	}
+
+	.barra_progresso{
+
+		width: 200px;
+		height: 20px;
+		background-color: rgb(200,200,200);
+		margin-bottom: 5px;
+	}
+
+	.barra_verde{
+
+		width: 40%;
+		height: 20px;
+		background-color: rgb(0,137,95);
+	}

@@ -2,7 +2,9 @@ package models.fabricaRepositorio;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class FabricaRepositorio {
 	public static enum tipoBD{H2, ORACLE, POSTGRES}
@@ -10,9 +12,9 @@ public class FabricaRepositorio {
 	private static FabricaRepositorio.tipoBD getDBtype() throws FileNotFoundException{
 		Scanner input = new Scanner(new File("conf.txt"));
 		String temp = input.nextLine();
-		String[] temp2 = temp.split(temp, ':');
+		String[] temp2 = temp.split(Pattern.quote("."));
 		if(temp2[0].equals("DATABASE")){
-			switch(temp2[0]){
+			switch(temp2[1]){
 				case "H2":
 					return FabricaRepositorio.tipoBD.H2;
 				case "ORACLE":
@@ -21,7 +23,7 @@ public class FabricaRepositorio {
 					return FabricaRepositorio.tipoBD.POSTGRES;
 			}	
 		}else{
-			throw new IllegalArgumentException("Configuração de database inválida");
+			throw new IllegalArgumentException("Configuração de database inválida, the value passed was: " + temp2[0]);
 		}
 		return null;
 		

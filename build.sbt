@@ -12,8 +12,10 @@ libraryDependencies ++= Seq(
   javaWs,
   javaCore,
   javaJpa,
-  "org.hibernate" % "hibernate-entitymanager" % "4.3.9.Final" // replace by your jpa implementation
+  "org.hibernate" % "hibernate-entitymanager" % "4.3.9.Final" // replace by your jpa implementation,
 )
+
+// libraryDependencies += "postgresql" % "postgresql" % "9.4.4.0.jdbc4"
 
 lazy val myProject = (project in file("."))
   .enablePlugins(PlayJava, PlayEbean)

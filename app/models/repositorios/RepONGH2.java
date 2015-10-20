@@ -2,7 +2,7 @@ package models.repositorios;
 
 import java.util.List;
 
-import models.ONG;
+import models.entity.ONG;
 
 
 public class RepONGH2 implements IRepONG{

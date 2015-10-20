@@ -1,11 +1,10 @@
-package models;
+package models.entity;
 
 import javax.persistence.*;
 
+import models.entity.Usuario;
 import play.db.ebean.*;
 import play.data.validation.Constraints.Required;
-
-import models.Usuario;
 
 @Entity
 public class ONG extends Model{

@@ -2,7 +2,7 @@ package models.repositorios;
 
 import java.util.List;
 
-import models.Projeto;
+import models.entity.Projeto;
 
 public interface IRepProjeto {
 	public List<Projeto> all();

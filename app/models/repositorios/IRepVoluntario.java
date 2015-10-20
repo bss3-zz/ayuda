@@ -2,7 +2,7 @@ package models.repositorios;
 
 import java.util.List;
 
-import models.Voluntario;
+import models.entity.Voluntario;
 
 public interface IRepVoluntario {
 	public List<Voluntario> all();

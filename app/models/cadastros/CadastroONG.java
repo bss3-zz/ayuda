@@ -2,7 +2,7 @@ package models.cadastros;
 
 import java.io.FileNotFoundException;
 
-import models.ONG;
+import models.entity.ONG;
 import models.fabricaRepositorio.FabricaRepositorio;
 import models.repositorios.IRepONG;
 
