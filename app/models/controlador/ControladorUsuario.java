@@ -18,9 +18,7 @@ public class ControladorUsuario {
 	}
 	
 	public boolean cadastroUsuario(Usuario usuario){
-		System.err.println("Passou aqui 1");
 		if (!cadastroUsuario.verificarUsername(usuario)){
-			System.err.println("Passou aqui 2");
 			cadastroUsuario.cadastrar(usuario);
 			return true;
 		}else{

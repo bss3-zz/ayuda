@@ -8,14 +8,12 @@ import models.entity.Voluntario;
 public class RepVoluntarioH2 implements IRepVoluntario{
 	@Override
 	public List<Voluntario> all() {
-		// TODO Auto-generated method stub
-		return null;
+		return Voluntario.find.all();
 	}
 
 	@Override
-	public Voluntario findId(long id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Voluntario findId(long id){
+		return Voluntario.find.byId(id);
 	}
 
 	@Override

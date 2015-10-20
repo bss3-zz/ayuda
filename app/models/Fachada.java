@@ -1,17 +1,19 @@
 package models;
 
 import models.controlador.ControladorUsuario;
+import models.controlador.ControladorVoluntario;
 import models.entity.Usuario;
 
 public class Fachada {
-//	private static Fachada fachada;
-	public static ControladorUsuario controladorUsuario = new ControladorUsuario();
-
-	public static boolean cadastrarUsuario(Usuario usuario) {
-		return controladorUsuario.cadastroUsuario(usuario);
+	private static final Fachada fachada = new Fachada();
+	public static final ControladorUsuario CONTROLADOR_USUARIO = new ControladorUsuario();
+	public static final ControladorVoluntario CONTROLADOR_VOLUNTARIO = new ControladorVoluntario();
+	
+	private Fachada(){
+		//Contrutor criado pra evitar instanciacao desta classe.
 	}
 	
-//	public static Fachada getInstance(){
-//		return fachada;
-//	}
+	public static Fachada getInstance(){
+		return fachada;
+	}
 }

@@ -33,7 +33,7 @@ public class Application extends Controller {
     }
     
     public Result cadastro() {
-        return ok(cadastro.render());
+        return ok(cadastro.render(false, ""));
     }
     
     public Result pagamento() {

@@ -3,7 +3,7 @@ package models.entity;
 import javax.persistence.*;
 import java.security.MessageDigest;
 
-import play.db.ebean.Model;
+import com.avaje.ebean.Model;
 import play.data.validation.Constraints.Required;
 
 import java.security.NoSuchAlgorithmException;

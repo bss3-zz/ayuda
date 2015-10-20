@@ -2,8 +2,7 @@ package models.entity;
 
 import javax.persistence.*;
 
-import models.entity.Usuario;
-import play.db.ebean.*;
+import com.avaje.ebean.Model;
 import play.data.validation.Constraints.Required;
 
 import java.util.Date;

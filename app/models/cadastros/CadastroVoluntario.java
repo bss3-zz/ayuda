@@ -26,4 +26,8 @@ public class CadastroVoluntario {
 	public void atualizar(Voluntario voluntario) {
 		repVoluntario.atualizar(voluntario, voluntario.id);
 	}
+	
+	public Voluntario pegarVoluntario(Long id){
+		return repVoluntario.findId(id);
+	}
 }

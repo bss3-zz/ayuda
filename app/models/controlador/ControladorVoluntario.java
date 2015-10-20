@@ -18,7 +18,6 @@ public class ControladorVoluntario {
 	
 	public boolean cadastrarVoluntario(Voluntario voluntario){
 		cadastroVoluntario.cadastrar(voluntario);
-		
-		return true;
+		return voluntario.id!=0;
 	}
 }

@@ -1,15 +1,14 @@
 package models.entity;
 
 import javax.persistence.*;
-
 import models.entity.Usuario;
-import play.db.ebean.*;
+import com.avaje.ebean.Model;
 import play.data.validation.Constraints.Required;
 
 @Entity
 public class Voluntario extends Model{
 	private static final long serialVersionUID = 1L;
-
+	
 	@Id
 	public Long id;
 	
@@ -57,14 +56,10 @@ public class Voluntario extends Model{
 		this.telefone = telefone;
 	}
 
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-
+	
 	/**
      * Generic query helper para entidade Voluntario com id Long
      */
