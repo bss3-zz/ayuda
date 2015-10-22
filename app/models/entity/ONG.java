@@ -20,6 +20,7 @@ public class ONG extends Model{
 	public String descricao;
 	
 	@Required
+	@OneToOne() 
 	public Usuario usuario;
 
 	/**

@@ -1,3 +1,5 @@
+@(voluntario: models.entity.Voluntario)
+
 <html>
 
 <head>
@@ -17,9 +19,9 @@
 
 			<div class="menus" id="flag_esquerda">
 
-				<a href="home.html"><div class="item_menus" id="os_projetos"></div></a>
+				<a href="/home.html"><div class="item_menus" id="os_projetos"></div></a>
 				
-				<a href="home.html"><div class="item_menus" id="quem_somos"></div></a>
+				<a href="/home.html"><div class="item_menus" id="quem_somos"></div></a>
 
 				<div class="info_usuario" id="visitante">
 
@@ -31,11 +33,11 @@
 					
 					<div class="info_usuario2 dados_projetos">
 
-						<p id="info">Olá  <b>Victor Vernilli.</b></p>
+						<p id="info">Olá  <b>@voluntario.nome</b></p>
 
 						<a href="perfil_usuario.html"><i>perfil</i></a>
 
-						<a id="saida" href="home.html"><i>sair</i></a>
+						<a id="saida" href="/logoff.html"><i>sair</i></a>
 
 					</div>
 
@@ -43,14 +45,14 @@
 				
 			</div>
 
-			<a href="home.html"><div class="menus" id="logo"></div></a>
+			<a href="/home.html"><div class="menus" id="logo"></div></a>
 			
 
 			<div class="menus" id="flag_direita">
 
-				<a href="cadastro.html"><div class="item_menus" id="cadastro"></div></a>
+				<a href="/cadastro.html"><div class="item_menus" id="cadastro"></div></a>
 				
-				<a href="login.html"><div class="item_menus" id="entrar_ayuda"></div></a>
+				<a href="/login.html"><div class="item_menus" id="entrar_ayuda"></div></a>
 				
 			</div>
 
@@ -67,7 +69,7 @@
 
 				<img id="borda_foto" src="imagens/foto_usuario2.png">
 
-				<p class="titulo_caixinhas"><b>Victor Vernilli</b></p>
+				<p class="titulo_caixinhas"><b>@voluntario.nome</b></p>
 				<p class="subtitulos"><b><i>Recife, Pernambuco</i></b></p>
 
 			</div>
@@ -82,7 +84,7 @@
 
 				<div class="titulo_caixinhas">
 
-					<a class="opcoes_perfil" href="home.html"><b>Sair</b></a>
+					<a class="opcoes_perfil" href="/home.html"><b>Sair</b></a>
 
 				</div>
 
@@ -92,7 +94,7 @@
 
 		<div class="caixam" id="rodape">
 
-				<a href="home.html"><div id="logo_rodape"></div></a>
+				<a href="/home.html"><div id="logo_rodape"></div></a>
 
 		</div>
 

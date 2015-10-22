@@ -9,6 +9,8 @@ public interface IRepUsuario {
 	
 	public Usuario findId(long id);
 	
+	public Usuario findByUsername(String username);
+	
 	public void cadastrar(Usuario usuario);
 	
 	public void remover(long id);

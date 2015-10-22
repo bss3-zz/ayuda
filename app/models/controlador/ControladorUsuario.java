@@ -2,16 +2,18 @@ package models.controlador;
 
 import java.io.FileNotFoundException;
 
+import models.autenticacao.AutenticacaoUsuario;
 import models.cadastros.CadastroUsuario;
 import models.entity.Usuario;
-import views.html.cadastro;
 
 public class ControladorUsuario {
 	public CadastroUsuario cadastroUsuario;
+	public AutenticacaoUsuario loginAuthenticator;
 	
 	public ControladorUsuario() {
 		try {
 			this.cadastroUsuario = new CadastroUsuario();
+			this.loginAuthenticator = new AutenticacaoUsuario();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -28,5 +30,9 @@ public class ControladorUsuario {
 	
 	public Usuario show(Long id){
 		return cadastroUsuario.pegarUsuario(id);
+	}
+	
+	public Usuario login(String usuario, String senha){
+		return loginAuthenticator.autenticar(usuario, senha);
 	}
 }

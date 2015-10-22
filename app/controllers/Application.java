@@ -24,12 +24,8 @@ public class Application extends Controller {
         return ok(info_ong.render());
     }
     
-    public Result info_usuario() {
-        return ok(info_usuario.render());
-    }
-    
     public Result login() {
-        return ok(login.render());
+        return ok(login.render(false));
     }
     
     public Result cadastro() {
@@ -48,10 +44,6 @@ public class Application extends Controller {
         return ok(menu_logado.render());
     }
     
-    public Result perfil_usuario() {
-        return ok(perfil_usuario.render());
-    }
-    
     public Result projeto() {
         return ok(projeto.render());
     }
@@ -59,5 +51,9 @@ public class Application extends Controller {
     public Result info_projeto() {
         return ok(info_projeto.render());
     }
-
+    
+    public Result logoff() {
+    	session().clear();
+    	return redirect(routes.Application.index());
+    }
 }

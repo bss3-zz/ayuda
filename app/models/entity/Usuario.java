@@ -42,7 +42,11 @@ public class Usuario extends Model{
 	}
 
 	public void setSenha(String senha) {
-		this.senha = senha;
+		try {
+			this.senha = getDigest(senha);
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public String getDigest(String senha) throws NoSuchAlgorithmException{
@@ -64,15 +68,19 @@ public class Usuario extends Model{
 	    return this.usuario.equals(usuario) && this.verificarSenha(senhaPassada);
 	}
 	
-	public boolean verificarSenha(String senha) throws NoSuchAlgorithmException{
-	    return this.senha.equals(getDigest(senha));
+	public boolean verificarSenha(String senha){
+//	    try {
+			return this.senha.equals(senha);
+//		} catch (NoSuchAlgorithmException e) {
+//			return false;
+//		}
 	}
 	
 	public boolean verificarUsername(String username){
 		return this.usuario.equalsIgnoreCase(username);
 	}
 	
-	public static Finder<Long,Usuario> find = new Finder<Long,Usuario>(Long.class, Usuario.class); 
+	public static Finder<Long,Usuario> find = new Finder<Long,Usuario>(Long.class, Usuario.class);
 }
 
 

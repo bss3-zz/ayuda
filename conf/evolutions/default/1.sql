@@ -7,6 +7,8 @@ create table ong (
   id                        bigint not null,
   nome                      varchar(255),
   descricao                 varchar(255),
+  usuario_id                bigint,
+  constraint uq_ong_usuario_id unique (usuario_id),
   constraint pk_ong primary key (id))
 ;
 
@@ -35,6 +37,8 @@ create table voluntario (
   nome                      varchar(255),
   cpf                       varchar(255),
   telefone                  varchar(255),
+  usuario_id                bigint,
+  constraint uq_voluntario_usuario_id unique (usuario_id),
   constraint pk_voluntario primary key (id))
 ;
 
@@ -46,6 +50,10 @@ create sequence usuario_seq;
 
 create sequence voluntario_seq;
 
+alter table ong add constraint fk_ong_usuario_1 foreign key (usuario_id) references usuario (id) on delete restrict on update restrict;
+create index ix_ong_usuario_1 on ong (usuario_id);
+alter table voluntario add constraint fk_voluntario_usuario_2 foreign key (usuario_id) references usuario (id) on delete restrict on update restrict;
+create index ix_voluntario_usuario_2 on voluntario (usuario_id);
 
 
 

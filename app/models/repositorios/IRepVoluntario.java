@@ -2,6 +2,7 @@ package models.repositorios;
 
 import java.util.List;
 
+import models.entity.Usuario;
 import models.entity.Voluntario;
 
 public interface IRepVoluntario {
@@ -14,4 +15,6 @@ public interface IRepVoluntario {
 	public void remover(long id);
 	
 	public void atualizar(Voluntario voluntario, Long id);
+	
+	public Voluntario pegarVoluntarioAssociado(Usuario usuario);
 }

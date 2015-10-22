@@ -3,6 +3,9 @@ package models.repositorios;
 import java.util.Iterator;
 import java.util.List;
 
+import com.avaje.ebean.ExpressionList;
+import com.avaje.ebean.QueryIterator;
+
 import models.entity.Usuario;
 
 
@@ -15,6 +18,20 @@ public class RepUsuarioH2 implements IRepUsuario{
 	@Override
 	public Usuario findId(long id) {
 		return Usuario.find.byId(id);
+	}
+	
+	public Usuario findByUsername(String username){
+		ExpressionList<Usuario> query = Usuario.find.where().ilike("usuario", username);
+		QueryIterator<Usuario> it = query.findIterate();
+		Usuario usuario = null;
+		int count = 0;
+		while(it.hasNext()){
+			count++;
+			usuario = it.next();
+		}
+		
+		if (count > 1) return null;
+		else return usuario;
 	}
 
 	@Override

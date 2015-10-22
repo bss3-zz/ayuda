@@ -1,9 +1,6 @@
 package controllers;
  
-import java.util.HashMap;
 import java.util.Map;
-
-import com.fasterxml.jackson.databind.JsonNode;
 
 import models.Fachada;
 import models.entity.Usuario;
@@ -12,19 +9,9 @@ import play.mvc.*;
 import play.mvc.Controller;
 import play.data.Form;
 import views.html.cadastro;
-import views.html.info_usuario;
 
- public class VoluntarioController extends Controller {
- 
-	 public Result loadPage(){
-		 return ok(info_usuario.render());
-	 }
+ public class CadastroVoluntarioController extends Controller {
 	 
-     public Result show (Long id) {
-         Usuario usuario = Fachada.getInstance().CONTROLADOR_USUARIO.show(id);
-         return ok(info_usuario.render());
-     }
- 
      public Result registrar() {
     	 Form<Usuario> formUsuario = Form.form(Usuario.class);
     	 Usuario usuario = formUsuario.bindFromRequest().get();
@@ -35,9 +22,9 @@ import views.html.info_usuario;
     		 if (result){
     			 Map<String, String[]> formBody = request().body().asFormUrlEncoded();
     			 Voluntario voluntario = new Voluntario();
-    			 voluntario.setNome( formBody.get("nome").toString());
-    			 voluntario.setCPF( formBody.get("CPF").toString());
-    			 voluntario.setTelefone(formBody.get("nome").toString());
+    			 voluntario.setNome( formBody.get("nome")[0]);
+    			 voluntario.setCPF( formBody.get("CPF")[0]);
+    			 voluntario.setTelefone(formBody.get("telefone")[0]);
     			 voluntario.setUsuario(usuario);			 
     			 Form<Voluntario> formVoluntario = Form.form(Voluntario.class, Usuario.class);
     			 formVoluntario.fill(voluntario);
