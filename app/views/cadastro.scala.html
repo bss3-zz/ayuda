@@ -8,20 +8,84 @@
 
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 </head>
 
 <body>
-	
+
 	<script>
-		window.onload = function() {
+
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '197073330629482',
+	      xfbml      : true,
+	      version    : 'v2.5'
+	    });
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+
+	  // This is called with the results from from FB.getLoginStatus().
+	  function statusChangeCallback(response) {
+	    console.log('statusChangeCallback');
+	    console.log(response);
+	    // The response object is returned with a status field that lets the
+	    // app know the current login status of the person.
+	    // Full docs on the response object can be found in the documentation
+	    // for FB.getLoginStatus().
+	    if (response.status === 'connected') {
+	      // Logged into your app and Facebook.
+	      testAPI();
+	    } else if (response.status === 'not_authorized') {
+	      // The person is logged into Facebook, but not your app.
+	      document.getElementById('status').innerHTML = 'Please log ' +
+	        'into this app.';
+	    } else {
+	      // The person is not logged into Facebook, so we're not sure if
+	      // they are logged into this app or not.
+	      document.getElementById('status').innerHTML = 'Please log ' +
+	        'into Facebook.';
+	    }
+	  }
+
+	  // This function is called when someone finishes with the Login
+	  // Button.  See the onlogin handler attached to it in the sample
+	  // code below.
+	  function checkLoginState() {
+	    FB.getLoginStatus(function(response) {
+	      statusChangeCallback(response);
+	    });
+	  }
+
+
+	  FB.getLoginStatus(function(response) {
+	    statusChangeCallback(response);
+	  });
+
+
+	  function fillForm() {
+	    console.log('Fetching information.... ');
+	    FB.api('/me', {fields: 'name,email'} ,function(response) {
+	      $("#form-name").val(response.name);
+	      $("#form-email").val(response.email);
+	    });
+	  }
+
+	  window.onload = function() {
 			if (@raise_alert){
 				alert("@alert_message");
 			}
-  			yourFunction(param1, param2);
 		};
+
 	</script>
-	
+
 	<div class="tudo">
 		
 		<div id="menu">
@@ -69,10 +133,10 @@
 					
 					<form action="/cadastrarVoluntario/" method="POST">
 						<p class="opcoes"><b>Nome</b></p>
-						<input name="nome" type="text"/>
+						<input name="nome" type="text" id="form-name"/>
 							
 						<p class="opcoes"><b>E-mail</b></p>
-						<input name="usuario" type="text"/>
+						<input name="usuario" type="text" id="form-email"/>
 						
 						<p class="opcoes"><b>CPF</b></p>
 						<input name="CPF" type="text"/>
@@ -136,21 +200,10 @@
 			<div class="caixas">
 
 				<div class="caixinhas" id="cadastro_redesocial">
-
-					<p class="titulo_caixinhas"><b>Cadastre-se por uma rede social</b></p>
-					<p class="subtitulos">acesso rápido</p>
-						
-					<p class="opcoes"><b>Utilizando Facebook</b></p>
-
-					<p class="opcoes"><b>OU</b></p>
-
-					<p class="opcoes"><b>Utilizando Twitter</b></p>
-						
-					<p class="opcoes"><b>OU</b></p>
-
-					<p class="opcoes"><b>Utilizando Google+</b></p>
-
+					<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="true" data-auto-logout-link="true" data-scope="email public_profile"></div>
 				</div>
+
+				<button class="round-button-circle" onclick="fillForm()">Import Facebook data!</button>
 
 			</div>
 

@@ -21,7 +21,7 @@ GET     /info_projeto.html          controllers.Application.info_projeto()
 #Voluntario URLs
 GET     /info_usuario.html         controllers.VoluntarioDetailController.loadPage()
 PUT     /info_usuario.html      	controllers.VoluntarioDetailController.edit()
-POST 	/cadastrarVoluntario		controllers.CadastroVoluntarioController.registrar()
+POST 	/cadastrarVoluntario/		controllers.CadastroVoluntarioController.registrar()
 POST 	/login_usuario.html			controllers.LoginVoluntarioController.login()
 GET		/perfil_voluntario.html		controllers.VoluntarioPerfilController.loadPage()
 
